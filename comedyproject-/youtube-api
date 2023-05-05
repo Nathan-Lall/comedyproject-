@@ -1,0 +1,19 @@
+ //API key from youtube
+    let apiKey = "AIzaSyB8T6yJh1CgWmYMbQZwBiZ7kWR6pRbGNpI"
+
+    let search = title + date
+    videoSearch(apiKey,search,5)
+        
+    //pulls data from search
+  function videoSearch(apiKey,search,maxResults){
+    $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search,(data) => {
+        let video = '';
+        // Removes videos after each search
+        $("#videos").html("");
+        data.items.forEach(item => {
+        //adds videos in separate ifram
+        video = `
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+        `
+        $("#videos").append(video)
+        });
