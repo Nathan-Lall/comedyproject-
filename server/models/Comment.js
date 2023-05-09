@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 
 const commentSchema = new Schema({
   body: {
@@ -6,9 +6,14 @@ const commentSchema = new Schema({
     required: true,
   },
   timeStamp: {
-    type: Number,
+    type: Date,
     required: true,
   },
+//   // grab ID from Comedian
+//   comedianId: {
+//     type: Types.ObjectId,
+//     required: true,
+//   },
   upvotes: {
     type: Number,
     default: 0,
@@ -19,6 +24,6 @@ const commentSchema = new Schema({
   },
 });
 
-const Comment = model('Comment', commentSchema);
+// const Comment = model('Comment', commentSchema);
 
-module.exports = Comment;
+module.exports = commentSchema;
