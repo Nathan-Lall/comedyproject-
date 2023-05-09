@@ -17,6 +17,8 @@ const comedianSchema = new Schema({
   comments: [
     commentSchema,
   ],
+  //must save the comedian itself, cannot just save new comment
+  // on the server, will not comment.create, comedian.update(jerrysienfeld) or whatever 
 });
 
 const Comedian = model('Comedian', comedianSchema);
