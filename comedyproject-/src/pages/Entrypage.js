@@ -4,19 +4,20 @@ import { Container, Navbar, Nav, Card } from 'react-bootstrap';
 
 const Entrypage = () => {
   return (
-    <div>
+    <div style={{ alignItems:'center', backgroundColor: 'purple' }}>
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand>
-          <img src="logo.png" alt="Comedy Central logo" />
+          <img src="logo.png" alt="Comedytopia" style={{ fontSize: '86px' }} />
         </Navbar.Brand>
-        <Nav className="ml-auto">
+        <Nav className="ml-auto" >
           <Nav.Link href="#">Sign Up</Nav.Link>
+          <nav> </nav>
           <Nav.Link href="#">Log In</Nav.Link>
         </Nav>
       </Navbar>
 
       <Container fluid>
-        <Card className="mt-4">
+        <Card style={{ float: 'left', width: '30%', backgroundColor: 'lavender', padding: '20px' }}>
           <Card.Body>
             <Card.Title>Top Comics</Card.Title>
             <ul className="list-unstyled">
@@ -32,7 +33,7 @@ const Entrypage = () => {
           </Card.Body>
         </Card>
 
-        <Card className="mt-4">
+        <Card style={{ float: 'right' , width: '40%', backgroundColor: 'lavender', padding: '20px' }}>
           <Card.Body>
             <Card.Title>Upcoming Shows</Card.Title>
             <ul className="list-unstyled">
@@ -44,21 +45,23 @@ const Entrypage = () => {
             </ul>
           </Card.Body>
         </Card>
+        
 
-        <section id="iframe-container" className="mt-4">
+        {/* <section id="iframe-container" style={{ alignItems: 'center', width: '30%', backgroundColor: 'lavender', padding: 'auto'  }}> */}
           <iframe
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            width="560"
+            width="315"
             height="315"
             title="YouTube video"
             frameBorder="0"
             allowFullScreen
           ></iframe>
-        </section>
-      </Container>
+        {/* </section> */}
+        </Container>
+      
 
-      <footer className="bg-dark text-white text-center py-3 mt-4">
-        <p>&copy; 2023 Comedy Central</p>
+      <footer style={{ backgroundColor: 'dark', color: 'white', textAlign: 'center', padding: '20px', marginTop: '20px' }}>
+        <p>&copy; 2023 Comedytopia</p>
       </footer>
     </div>
   );
