@@ -1,7 +1,7 @@
 {
-  "name": "tech-matchup-app",
+  "name": "comedyproject",
   "version": "1.0.0",
-  "description": "",
+  "description": "comedy hub page",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js --ignore client",
