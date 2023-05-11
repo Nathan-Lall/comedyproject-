@@ -45,7 +45,7 @@ const Entrypage = () => {
           </Card.Body>
         </Card>
 
-        <section id="iframe-container" className="mt-4">
+        {/* <section id="iframe-container" className="mt-4"> */}
           <iframe
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             width="560"
@@ -54,7 +54,7 @@ const Entrypage = () => {
             frameBorder="0"
             allowFullScreen
           ></iframe>
-        </section>
+        {/* </section> */}
       </Container>
 
       <footer className="bg-dark text-white text-center py-3 mt-4">
