@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Home from './pages/Home';
-import Matchup from './pages/Matchup';
-import Vote from './pages/Vote';
-import NotFound from './pages/NotFound';
+import EntryPage from './pages/EntryPage';
+import LandingPage from './pages/LandingPage';
+import ProfilePage from './pages/ProfilePage';
+
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -17,7 +17,7 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
+            {/* <Route 
               path="/" 
               element={<Home />}
             />
@@ -32,7 +32,7 @@ function App() {
             <Route 
               path="*"
               element={<NotFound />}
-            />
+            /> */}
           </Routes>
         </div>
       </Router>
