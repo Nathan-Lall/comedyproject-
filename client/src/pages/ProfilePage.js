@@ -5,17 +5,10 @@ const Profilepagetemplate = () => {
   return (
     <div>
       <div className="picture">
-        <img src="profile_picture.jpg" alt="Profile Picture" width="200" />
+        
       </div>
       <div className="iframe">
-        <iframe
-          width="400"
-          height="300"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      
       </div>
       <h1>Welcome to My Profile Page</h1>
       <div className="upcoming-shows">
