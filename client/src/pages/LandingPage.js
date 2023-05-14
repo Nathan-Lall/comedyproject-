@@ -1,16 +1,27 @@
 import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import './App.css';
 
-
-const Landingpage = () => {
-    return (
-    <body>
-    <h1>Welcome to My Landing Page</h1>
-    <div style="text-align:center;">
-        <a href="https://www.example.com" target="_blank">
-            <button>Enter</button>
-        </a>
-    </div>
-</body>
-    )
+function App() {
+  return (
+    <Container>
+      <Row className="justify-content-md-center mt-5">
+        <Col md="auto">
+          <h1 className="glow">Comedytopia</h1>
+        </Col>
+      </Row>
+      <Row className="justify-content-md-center mt-5">
+        <Col md="auto">
+          <Button variant="primary" size="lg">Enter</Button>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
-export default Landingpage;
+
+export default App;
+
+
+
+
+

@@ -1,6 +1,6 @@
-const Tech = require('./Tech');
-const Matchup = require('./Matchup');
-const Comment = require('./Comment');
+const Comedian = require('./Comedian');
+const Shows = require('./Shows');
 
 
-module.exports = { Tech, Matchup };
+
+module.exports = { Comedian, Shows };
