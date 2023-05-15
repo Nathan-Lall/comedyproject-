@@ -1,13 +1,14 @@
 import React from 'react';
-
+import { SchulzImage,AriImage,BertImage,BillImage,DaveImage,ElonImage,LouisImage,MarkImage,MattImage,TomImage,LogoImage } from '../assets';
 
 const Landingpage = () => {
     return (
-    <body>
-    <h1>Welcome to My Landing Page</h1>
-    <div style="text-align:center;">
-        <a href="https://www.example.com" target="_blank">
-            <button>Enter</button>
+    <body  bg='rgb(4,4,60)'>
+    
+    <img src={LogoImage} alt="Comedytopia" style={{ width: '1000px', height: '400px' }} />
+    <div class="vertical-center"style={{text_align:"center",backgroundColor: 'rgb(4,4,60)'}}>
+        <a href="./EntryPage">
+            <button class="centered-button">Enter</button>
         </a>
     </div>
 </body>

@@ -17,22 +17,19 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            {/* <Route 
+            <Route 
               path="/" 
-              element={<Home />}
+              element={<LandingPage/>}
             />
             <Route 
-              path="/matchup" 
-              element={<Matchup />}
+              path="/EntryPage" 
+              element={<EntryPage/>}
             />
             <Route 
-              path="/matchup/:id" 
-              element={<Vote />}
+              path="/Profilepage" 
+              element={<ProfilePage/>}
             />
-            <Route 
-              path="*"
-              element={<NotFound />}
-            /> */}
+          
           </Routes>
         </div>
       </Router>
