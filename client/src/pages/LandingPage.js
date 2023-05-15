@@ -15,7 +15,7 @@ const Landingpage = () => {
     )
 }
 
-export default App;
+export default Landingpage;
 
 
 

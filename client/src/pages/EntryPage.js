@@ -62,14 +62,14 @@ const Entrypage = () => {
               <Card.Body>
                 <Card.Title>Top Comics</Card.Title>
                 <ul className="list-unstyled">
-                  <li>Elon Musk</li>
-                  <li>Dave Chappelle</li>
-                  <li>Louis CK</li>
-                  <li>Bert Kreischer</li>
-                  <li>Andrew Schiltz</li>
-                  <li>Matt Rife</li>
-                  <li>Mark Norman</li>
-                  <li>Bill Burr</li>
+                  <li><a href="/Profilepage">Elon Musk</a></li>
+                  <li><a href="/Profilepage">Dave Chappelle</a></li>
+                  <li><a href="/Profilepage">Louis CK</a></li>
+                  <li><a href="/Profilepage">Bert Kreischer</a></li>
+                  <li><a href="/Profilepage">Andrew Schiltz</a></li>
+                  <li><a href="/Profilepage">Matt Rife</a></li>
+                  <li><a href="/Profilepage">Mark Norman</a></li>
+                  <li><a href="/Profilepage">Bill Burr</a></li>
                 </ul>
               </Card.Body>
             </Card>
