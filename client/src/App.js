@@ -17,19 +17,20 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-             <Route 
+            <Route 
               path="/" 
-              element={<LandingPage />}
+              element={<LandingPage/>}
             />
       
             <Route 
-              path="/entry" 
-              element={<EntryPage />}
+              path="/EntryPage" 
+              element={<EntryPage/>}
             />
             <Route 
-              path="/Profilepage"
-              element={<ProfilePage />}
-            /> */
+              path="/Profilepage" 
+              element={<ProfilePage/>}
+            />
+          
           </Routes>
         </div>
       </Router>

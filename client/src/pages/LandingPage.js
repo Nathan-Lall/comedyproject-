@@ -1,22 +1,18 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import './App.css';
+import { SchulzImage,AriImage,BertImage,BillImage,DaveImage,ElonImage,LouisImage,MarkImage,MattImage,TomImage,LogoImage } from '../assets';
 
-function App() {
-  return (
-    <Container>
-      <Row className="justify-content-md-center mt-5">
-        <Col md="auto">
-          <h1 className="glow">Comedytopia</h1>
-        </Col>
-      </Row>
-      <Row className="justify-content-md-center mt-5">
-        <Col md="auto">
-          <Button variant="primary" size="lg">Enter</Button>
-        </Col>
-      </Row>
-    </Container>
-  );
+const Landingpage = () => {
+    return (
+    <body  bg='rgb(4,4,60)'>
+    
+    <img src={LogoImage} alt="Comedytopia" style={{ width: '1000px', height: '400px' }} />
+    <div class="vertical-center"style={{text_align:"center",backgroundColor: 'rgb(4,4,60)'}}>
+        <a href="./EntryPage">
+            <button class="centered-button">Enter</button>
+        </a>
+    </div>
+</body>
+    )
 }
 
 export default App;
