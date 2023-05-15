@@ -1,6 +1,5 @@
 const Comedian = require('./Comedian');
-const Shows = require('./Shows');
+const Show = require('./Show');
 
 
-
-module.exports = { Comedian, Shows };
+module.exports = { Comedian, Show };

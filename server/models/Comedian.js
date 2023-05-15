@@ -1,43 +1,21 @@
 const { Schema, model } = require('mongoose');
-const ShowsSchema = require('./Shows')
 
 
+const comedianSchema = new Schema({
+	first_name: {
+		type: String,
+		required: true,
+		maxlength: 50,
+		trim: true,
+	},
+	last_name: {
+		type: String,
+		required: true,
+		maxlength: 50,
+		trim: true,
+	}
+});
 
-const comedianSchema = new Schema(
-  {
-    firstname: {
-      type: String,
-      required: true,
-      unique: true,
-      maxlength: 50,
-      trim: true,
-    },
-    lastname: {
-      type: String,
-      required: true,
-      unique: true,
-      maxlength: 50,
-      trim: true,
-    },
-    DOB: {
-      type: String,
-      required: true
-    },
-    shows: {
-      type: Schema.Types.ObjectId,
-      default: "shows",
-    },
-  },
-  {
-    toJSON: {
-      virtuals: true,
-    },
-    id: false,
-  }
-);
+const Comedian = model('Comedian', comedianSchema);
 
-
-
-const comedian = model('comedian', comedianSchema);
-
-module.exports = User;
+module.exports = Comedian;

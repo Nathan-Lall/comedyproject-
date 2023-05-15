@@ -1,23 +1,43 @@
 import { gql } from '@apollo/client';
 
-export const CREATE_MATCHUP = gql`
-  mutation createMatchup($tech1: String!, $tech2: String!) {
-    createMatchup(tech1: $tech1, tech2: $tech2) {
-      _id
-      tech1
-      tech2
-    }
-  }
+export const CREATE_COMEDIAN = gql`
+	mutation CreateComedian($firstName: String!, $lastName: String!) {
+	  createComedian(first_name: $firstName, last_name: $lastName) {
+	    _id
+	    first_name
+	    last_name
+	  }
+	}
 `;
 
-export const CREATE_VOTE = gql`
-  mutation createVote($_id: String!, $techNum: Int!) {
-    createVote(_id: $_id, techNum: $techNum) {
-      _id
-      tech1
-      tech2
-      tech1_votes
-      tech2_votes
-    }
+export const UPDATE_COMEDIAN = gql`
+mutation UpdateComedian($comedianId: String!, $firstName: String!, $lastName: String!) {
+  updateComedian(comedianId: $comedianId, first_name: $firstName, last_name: $lastName) {
+    _id
+    first_name
+    last_name
   }
+}
 `;
+
+export const DELETE_COMEDIAN = gql`
+mutation DeleteComedian($comedianId: String!) {
+  deleteComedian(comedianId: $comedianId) {
+    _id
+    first_name
+  }
+}
+`;
+
+export const CREATE_SHOW = gql`
+mutation CreateShow($date: String!, $city: String!, $venue: String!, $time: String!, $comedian: String!) {
+  createShow(date: $date, city: $city, venue: $venue, time: $time, comedian: $comedian) {
+    date
+    city
+    time
+    venue
+    _id
+  }
+}
+`;
+

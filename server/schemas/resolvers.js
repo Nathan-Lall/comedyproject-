@@ -1,28 +1,29 @@
-const { Tech, Matchup } = require('../models');
+const {  Comedian, Show } = require('../models');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
+    comedians: async () => {
+      return Comedian.find({});
     },
   },
+	Comedian: {
+		shows: async (parent) => {
+			return Show.find({ comedian: parent._id });
+		},
+	},
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    createComedian: async (parent, args) => {
+      return  await Comedian.create(args);
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
+	  updateComedian: async (parent, { comedianId, first_name, last_name }) => {
+		  return Comedian.findOneAndUpdate({ _id: comedianId}, { first_name, last_name })
+	  },
+	deleteComedian: async (parent, { comedianId }) => {
+		return await Comedian.findOneAndDelete({ _id: comedianId})
+	},
+	createShow: async (parent, args) => {
+		return await Show.create(args);
+	}
   },
 };
 
