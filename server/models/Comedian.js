@@ -1,24 +1,43 @@
 const { Schema, model } = require('mongoose');
-const commentSchema = require('./Comment')
+const ShowsSchema = require('./Shows')
 
-const comedianSchema = new Schema({
-  name: {
-   type: String,
-   required: true,
-  },
-  upvotes: {
-    type: Number,
-    default: 0,
-  },
-  downvotes: {
-    type: Number,
-    default: 0,
-  },
-  comments: [
-    commentSchema,
-  ],
-});
 
-const Comedian = model('Comedian', comedianSchema);
 
-module.exports = Comedian;
+const comedianSchema = new Schema(
+  {
+    firstname: {
+      type: String,
+      required: true,
+      unique: true,
+      maxlength: 50,
+      trim: true,
+    },
+    lastname: {
+      type: String,
+      required: true,
+      unique: true,
+      maxlength: 50,
+      trim: true,
+    },
+    DOB: {
+      type: String,
+      required: true
+    },
+    shows: {
+      type: Schema.Types.ObjectId,
+      default: "shows",
+    },
+  },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+    id: false,
+  }
+);
+
+
+
+const comedian = model('comedian', comedianSchema);
+
+module.exports = User;

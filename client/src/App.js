@@ -21,6 +21,7 @@ function App() {
               path="/" 
               element={<LandingPage/>}
             />
+      
             <Route 
               path="/EntryPage" 
               element={<EntryPage/>}
